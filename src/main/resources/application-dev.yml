@@ -1,0 +1,13 @@
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/jpashop?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul
+        driverClassName: com.mysql.cj.jdbc.Driver
+        username: admin
+        password: mg&=nc+i[it;TH,NV06D$2xs{
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+                ddl-auto: create
+                "[format_sql]": true
+                "[show_sql]": true
