@@ -6,7 +6,8 @@ spring:
         password: mg&=nc+i[it;TH,NV06D$2xs{
     jpa:
         hibernate:
-            ddl-auto: create
+            # ddl-auto: create
+            ddl-auto: none
         # show-sql: true
         properties:
             dialect: org.hibernate.dialect.MySQL8InnoDBDialect
