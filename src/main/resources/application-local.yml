@@ -7,7 +7,7 @@ spring:
     jpa:
         hibernate:
             # ddl-auto: create
-            ddl-auto: none
+            ddl-auto: create
         # show-sql: true
         properties:
             dialect: org.hibernate.dialect.MySQL8InnoDBDialect
@@ -16,4 +16,4 @@ spring:
 
 logging.level:
     "[org.hibernate.SQL]": debug
-    "[org.hibernate.type]": trace
+    # "[org.hibernate.type]": trace
