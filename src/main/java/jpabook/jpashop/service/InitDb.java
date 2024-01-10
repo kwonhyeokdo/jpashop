@@ -40,11 +40,14 @@ public class InitDb {
         private final EntityManager em;
         public void dbInit1(){
             Member member = createMember("userA", new Address("서울", "1", "11111"));
+            em.persist(member);
             Book book1 = createBook("JPA1 BOOK", 10000, 100);
+            em.persist(book1);
             Book book2 = createBook("JPA2 BOOK", 20000, 100);
+            em.persist(book2);
 
             OrderItem orderItem1 = OrderItem.createOrderItem(book1, 10000, 1);
-            OrderItem orderItem2 = OrderItem.createOrderItem(book2, 20000, 1);
+            OrderItem orderItem2 = OrderItem.createOrderItem(book2, 20000, 2);
 
             Delivery delivery = createDelivery(member);
 
@@ -54,8 +57,11 @@ public class InitDb {
 
         public void dbInit2(){
             Member member = createMember("userB", new Address("진주", "2", "2222"));
+            em.persist(member);
             Book book1 = createBook("SPRING1 BOOK", 20000, 200);
+            em.persist(book1);
             Book book2 = createBook("SPRING2 BOOK", 40000, 300);
+            em.persist(book2);
 
             OrderItem orderItem1 = OrderItem.createOrderItem(book1, 20000, 3);
             OrderItem orderItem2 = OrderItem.createOrderItem(book2, 40000, 4);
@@ -70,7 +76,6 @@ public class InitDb {
             Member member = new Member();
             member.setName(name);
             member.setAddress(address);
-            em.persist(member);
             return member;
         }
 
@@ -79,7 +84,6 @@ public class InitDb {
             book.setName(name);
             book.setPrice(price);
             book.setStockQuantity(stockQuantity);
-            em.persist(book);
             return book;
         }
 

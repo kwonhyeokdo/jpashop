@@ -10,4 +10,5 @@ spring:
                 dialect: org.hibernate.dialect.MySQLDialect
                 ddl-auto: create
                 "[format_sql]": true
-                "[show_sql]": true
+                "[defaultbatch_fetch_size]": 100
+                # "[show_sql]": true
